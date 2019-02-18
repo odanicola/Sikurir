@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Sikurir</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'frontend', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'frontend', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="https://www.jet.co.id/images/favicon.ico" />
+  </head>
+  <body>
+    <%= render 'layouts/frontend/header' %>
+    <%= yield %>
+    <%= render 'layouts/frontend/footer' %>
+    <script id="dsq-count-scr" src="//sikurir.disqus.com/count.js" async></script>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5bece9f0555e3400116bfae5&product=inline-share-buttons' async='async'></script>
+  </body>
+  <script type="text/javascript">
+    $(function(){
+      $('.carousel').carousel({
+        interval: 2000
+      });
+    });
+  </script>
+</html>

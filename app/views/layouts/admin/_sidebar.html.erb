@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-12 sidebar-news">
+    <img class="img-responsive" src="https://1.bp.blogspot.com/-KJgShpCt3J0/W3nd4iu8cSI/AAAAAAAALtg/ioSFgtyB9F4ji0AlxxrR1inhiY1eCrwVgCLcBGAs/s640/kompetisi-bukablog.jpg" alt="">
+  </div>
+  <div class="col-md-12 sidebar-news">
+    <h4>News & Event</h4>
+    <% @news_all.each do |value| %>
+    <div class="all-news">
+      <a href="<%= news_path(value.slug) %>">
+        <img class="img-responsive" src="https://via.placeholder.com/400x200" alt="">
+      </a>
+      <h5><span class="label label-success"><%= value.post_type.capitalize %></span></h5>
+      <div class="news-title">
+        <a href="<%= news_path(value.slug) %>">
+          <span><strong><%= value.title %></strong><br><small><%= Time.at(value.updated_at).strftime("%a %b %d %H:%M:%S %Z %Y")%></small></span>
+        </a>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>

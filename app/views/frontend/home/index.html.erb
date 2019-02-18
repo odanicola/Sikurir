@@ -1,0 +1,126 @@
+<%= render 'layouts/frontend/slider' %>
+<div class="container">
+  <div class="tools col-md-12">
+    <div class="row tariff-trace">
+      <div class="col-md-6 tariff" style="border-right: 1px solid grey">
+        <div class="inner-container">
+          <h4>Tariff Check</h4>
+          <div class="tools col-md-12">
+            <form class="form-horizontal" style="text-align:left;margin-top:20px;">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">From: </label>
+                <div class="col-sm-9">
+                  <select class="form-control" name="">
+                    <option value="1">Select Province</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">To:</label>
+                <div class="col-sm-9">
+                  <select class="form-control" name="">
+                    <option value="1">Select Province</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-3 control-label">Weight:</label>
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" placeholder="Kg" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-3 control-label">Dimension:</label>
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" placeholder="P" value="">
+                </div>
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" placeholder="L" value="">
+                </div>
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" placeholder="T" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9" style="text-align:center">
+                  <button type="submit" class="btn btn-danger ">Check</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6 track">
+        <div class="inner-container">
+          <h4>Trace & Track</h4>
+          <div class="tools col-md-12">
+            <form class="form-horizontal" style="margin-top:20px;">
+              <div class="form-group">
+                <textarea name="name" class="form-control" placeholder="Your Airway Bill" rows="6" ></textarea>
+              </div>
+
+              <div class="form-group">
+                <p>Enter your waybill number (separated by comma). Available up to 10 waybills.</p>
+                <button type="submit" class="btn btn-danger ">Track</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container tools-droppoint-container" style="text-align:center;">
+  <div class="droppoint-form">
+    <div class="pin">
+      <i class="fa fa-map-o" aria-hidden="true"></i>
+
+    </div>
+    <div class="dp-form">
+      <h4>Find local Drop Point in your area</h4>
+      <form class="form-inline">
+        <div class="form-group">
+          <select class="form-control" name="">
+            <option value="">Select Area</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control"placeholder="jane.doe@example.com">
+        </div>
+        <button type="submit" class="btn btn-danger">Go</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="news-outer-container">
+  <div class="container">
+    <div class="news col-md-10">
+      <div class="co-md-12" style="text-align:center">
+        <h4>News & Event</h4>
+      </div>
+      <div class="all-news">
+        <% @news.each do |value| %>
+        <div class="col-md-4 news-column">
+          <div class="single-news">
+            <a href="<%= 'news/' + value.slug %>">
+              <img class="img-responsive" src="https://via.placeholder.com/800x400" alt="">
+            </a>
+            <div class="news-title">
+              <a href="<%= 'news/' + value.slug %>">
+                <span><%= value.title %></span>
+              </a>
+            </div>
+            <div class="excerpt">
+              <p> <%= excerpt(value.content, '', radius: 150) %>...</p>
+            </div>
+            <a href="<%= 'news/' + value.slug %>" class="read-more">
+              <h6> > Read More</h6>
+            </a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

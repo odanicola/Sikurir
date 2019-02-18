@@ -1,0 +1,347 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a:hover{
+    text-decoration: none;
+}
+
+.header .logo-container, .header .navbar-container, .header .hotline-container{
+  text-align: center;
+}
+.header .navbar-header{
+  float:none;
+}
+.header .logo-container .navbar-header .logo{
+  display: inline-block;
+  float: left;
+}
+.header .logo-container img{
+  height: auto;
+  max-width: 180px;
+  padding: 5px 0;
+}
+.header .navbar-container, .header .hotline-container{
+  background-color: #fff;
+}
+
+.navbar{
+    margin-bottom: 8px;
+}
+
+.navbar-default{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: #FA1100;
+  // background-color: #FA1100;
+  border: 1px solid #FA1100;
+  background-color: white
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #000;
+  font-weight: bold;
+}
+
+.tools{
+  margin: 0 auto;
+  float: none;
+}
+
+.tools .row{
+  margin: 10px auto;
+}
+
+.tools .row.tariff-trace{
+  width: 100%;
+  margin: 20px 0;
+}
+
+.tools .row .tariff, .tools .row .track{
+  background-color: white;
+  // border-bottom: 2px solid red;
+  flex: 1;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0;
+  min-height:250px;
+}
+
+.tools .row.tariff-trace form{
+  padding: 0 40px;
+}
+
+.tools h4{
+  color:#FA1100;
+}
+
+.tools-droppoint-container{
+  width: 100%;
+  padding: 30px 0;
+  background-color: #e0e0e0;
+}
+
+.tools-droppoint-container .droppoint-form{
+  align-items: center;
+  justify-content: center;
+}
+
+.tools-droppoint-container .pin{
+  margin: 10px 20px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.btn-danger{
+  background-color: #FA1100;
+}
+
+.inner-container{
+  text-align: center;
+}
+
+.news-outer-container{
+  width: 100%;
+  /* margin: 40px 0; */
+  background-color: #fff;
+  /* background-color: #e0e0e0; */
+  padding: 40px 0;
+}
+
+.news{
+  margin: 0 auto;
+  float: none;
+}
+
+.news .all-news{
+  display: flex;
+}
+
+.news .news-column{
+  background-color: #fff;
+  margin: 20px 0;
+  position: relative;
+}
+
+.news .news-column h4{
+  color: #ff0000;
+}
+
+.news .single-news{
+  margin: 0 0 35px;
+}
+
+.news .single-news img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.news .single-news .news-title{
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.news .all-news a{
+  color:black;
+}
+
+.news .news-column .single-news .excerpt{
+  font-size: 12px;
+  font-weight: 400;
+  color: #989797;
+}
+
+.news h4{
+    color: red;
+}
+
+.news .news-column .read-more{
+  position: absolute;
+  bottom: 5px;
+}
+
+.news .news-column h6{
+  color: #ff0000;
+}
+
+.single-news-page .author{
+  border-top: 1px solid #eee;
+  border-bottom:1px solid #eee;
+  padding-top:10px;
+  padding-bottom: 10px;
+  margin:0 0 15px;
+  display: flex;
+  align-items:center;
+  font-size:12px;
+}
+
+.single-news-page .author span, .all-news-page .author span{
+  width: 50%;
+}
+
+.single-news-page .avatar{
+  max-height: 50px;
+}
+
+.single-news-page .content, .single-news-page .title{
+  margin:20px 0 20px;
+}
+
+.all-news-page .author{
+  border-top: 1px solid #eee;
+  border-bottom:1px solid #eee;
+  padding-top:5px;
+  padding-bottom: 5px;
+  margin:0 0 5px;
+  display: flex;
+  align-items:center;
+  font-size:10px;
+}
+.all-news-page .avatar{
+  height: 30px;
+}
+
+.all-news-page .article{
+  min-height: 250px;
+}
+
+.all-news-page .title a{
+  color:black;
+}
+
+.all-news-page .content p{
+  margin-bottom:5px;
+}
+
+.all-news-page .tag, .all-news-page .list-article{
+  margin:0;
+  padding:0;
+  display: inline-block;
+}
+
+.all-news-page .list-article li{
+    list-style: none;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.all-news-page.list-article li:last-child{
+  border-bottom: none;
+}
+
+.all-news-page .tag li{
+  list-style: none;
+  padding:5px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  display: inline-block;
+  font-size:11px;
+}
+
+.all-news-page .content p{
+  margin-bottom:25px;
+}
+
+.sidebar-news .all-news{
+  margin-top: 30px;
+}
+
+.sidebar-news .news-title{
+  margin-top: 10px;
+}
+
+.sidebar-news .news-title a{
+  color:black;
+}
+
+.sidebar-news h4{
+  margin-top:20px;
+  line-height: 50px;
+  border-bottom: 1px solid grey
+}
+
+.footer-front{
+  background-color: #fff;
+  font-size: 13px;
+  width: 100%;
+  color: #000;
+  margin-top:20px;
+}
+
+.footer-front .top > .row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-front .container{
+  border-top: 1px solid rgba(141,141,141,0.5);
+}
+
+.footer-front .top > .row ul{
+  padding:0;
+}
+
+.footer-front .top > .row ul li{
+  list-style: none;
+    line-height: 1.5;
+}
+
+.footer-front a{
+  color: black
+}
+
+.footer-front h5{
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.bottom{
+  color: #fff;
+  background-color: #ff0000;
+}
+
+.footer-front .bottom > .container{
+  border:none;
+}
+.footer-front .bottom .logo{
+  text-align: left;
+  padding: 5px 0;
+}
+
+.footer-front .bottom .copyright{
+  font-size: 1em;
+  margin-top: 2px;
+  text-align: right;
+}
+
+.footer-front .bottom > .container > .row{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.footer-front .bottom .logo img{
+  max-width: 150px;
+}
+
+.footer-front .top > .row .social-media{
+  font-size: 30px;
+  text-align: center;
+}
+
+.nopadding{
+  padding:0;
+}
+
+.nopadding-left{
+  padding-left:0;
+}
+
+.nopadding-right{
+  padding-right:0;
+}
